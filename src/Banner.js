@@ -30,11 +30,11 @@ const Banner = ({ user, house, setHouse, housesData, usersData }) => {
         </Navbar.Segment>
         <Navbar.Segment align="end">
           <Navbar.Item as="div">
-            <HouseOptions house={house} setHouse={setHouse} user={user} housesData={housesData} usersData={usersData}/>
+            <HouseOptions house={house} setHouse={setHouse} user={user} housesData={housesData} usersData={usersData} />
           </Navbar.Item>
           <Navbar.Item as="div">
-            {!user ? <SignIn/> :
-            <Logout user={user} house={house}/>}
+            {!user ? <SignIn /> :
+              <Logout user={user} house={house} />}
           </Navbar.Item>
         </Navbar.Segment>
       </Navbar.Menu>
@@ -62,9 +62,10 @@ const Logout = ({ user, house }) => {
 };
 
 const SignIn = () => (
-  <div data-cy="sign-in">
-    <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
+  <div data-cy='sign-in'>
+    <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
   </div>
+
 );
 
 export default Banner;
